@@ -13,16 +13,16 @@ package practice13.common;
  */
 public class Character {
 	/** 名前 */
-	private String name = "キャラクター";
+	protected String name = "キャラクター";
 
 	/** 体力 */
-	private int hp;
+	protected int hp;
 
 	/** 力 */
-	private int power;
+	protected int power;
 
 	/** 防御力 */
-	private int endurance;
+	protected int endurance;
 
 	/**
 	 * 体力、攻撃力、防御力の初期値を設定しつつ、Characterインスタンスを生成します
@@ -57,6 +57,7 @@ public class Character {
 	 * @return 相手に与えるダメージを返します
 	 */
 	public int attack() {
+		System.out.println(this.name+"の攻撃 "+this.power+"のダメージ");
 		return this.power;
 	}
 
@@ -75,6 +76,7 @@ public class Character {
 
 		// ダメージ分体力を減らす
 		this.hp -= calc;
+		System.out.println(this.name+"の残りの体力 "+this.hp+"\n");
 
 		// 体力がなくなったかどうかの判定
 		if (this.hp <= 0) {
