@@ -23,6 +23,13 @@ public class Book {
 	 * @param pageSize	ページ数
 	 * @param publication	出版社
 	 */
+	Book(){
+		this("スッキリわかるJava入門","中山清喬／国本大悟",2600);
+	}
+	Book(String title, String author, int price){
+		this(title, author, price, 657, "インプレス");
+	}
+
 	Book(String title, String author, int price, int pageSize, String publication) {
 		this.title = title;
 		this.author = author;
