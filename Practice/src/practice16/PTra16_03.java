@@ -18,7 +18,17 @@ public class PTra16_03 {
 
 	public static void main(String[] args) {
 
-		// ★ PTra16_03クラスのtoStringメソッドの内容を出力してください
 
+		// ★ PTra16_03クラスのtoStringメソッドの内容を出力してください
+		PTra16_03 P = new PTra16_03();
+		System.out.println(P.toString());
+	}
+
+	@Override
+	public String toString() {
+		System.out.println(super.toString());
+		System.out.println();
+	    String className = new Object(){}.getClass().getEnclosingClass().getName();
+	    return (className+"#toString()の処理");
 	}
 }
