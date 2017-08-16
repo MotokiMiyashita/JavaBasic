@@ -35,29 +35,77 @@ public class PTra17_03 {
 		 * から再度入力を求めるような形に仕様変更してください。
 		 *
 		 */
-		try {
-			for (int i = 0; i < question.length; i++) {
-				System.out.println("問題：" + (i + 1));
-				System.out.println(question[i]);
 
-				System.out.println("回答を数字で入力してください");
-				String input = ThrowExceptionUtil.inputValue();
 
-				int num = Integer.parseInt(input);
 
-				if (answer[i] == num) {
-					score++;
+
+			try {
+				for (int i = 0; i < question.length; i++) {
+					System.out.println("問題：" + (i + 1));
+					System.out.println(question[i]);
+					String input=null;
+					int num;
+					while(true) {
+						System.out.println("回答を数字で入力してください");
+						if ((num=isNumber()) > 0) break;
+					}
+//					num = Integer.parseInt(input);
+
+					if (answer[i] == num) {
+						score++;
+					}
 				}
+
+			} catch(IOException e) {
+				System.out.println("例外が発生しました");
 			}
-		} catch(IOException e) {
-			System.out.println("例外が発生しました");
-		} catch(NumberFormatException e) {
-			System.out.println("数字以外が入力されました");
-		}
+
+
+
+
+//		String input=null;
+//		Boolean isCollectNum = false;
+//		while(!isCollectNum) {
+//			try {
+//				for (int i = 0; i < question.length; i++) {
+//					System.out.println("問題：" + (i + 1));
+//					System.out.println(question[i]);
+//					System.out.println("回答を数字で入力してください");
+//
+//					input = ThrowExceptionUtil.inputValue();
+//					isCollectNum = true;
+//					int num = Integer.parseInt(input);
+//
+//					if (answer[i] == num) {
+//						score++;
+//					}
+//				}
+//				isCollectNum = true;
+//
+//			} catch(IOException e) {
+//				System.out.println("例外が発生しました");
+//			} catch(NumberFormatException e) {
+//				System.out.println("数字以外が入力されました");
+//
+//				System.out.println("test");
+//			}
+//			System.out.println("test2");
+//		}
+
 
 		System.out.println("全ての問題が終わりました。");
 		System.out.println("あなたの得点は・・・" + score + "点です！");
 
+	}
+
+
+	public static int isNumber() throws IOException{
+		try{
+			String input = ThrowExceptionUtil.inputValue();
+			return Integer.parseInt(input);
+		}catch (NumberFormatException e){
+			return -1;
+		}
 	}
 
 }
