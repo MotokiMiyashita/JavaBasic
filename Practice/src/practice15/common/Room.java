@@ -8,13 +8,16 @@ package practice15.common;
 
 import java.util.Date;
 
-public class Room {
+public abstract class Room {
 	/** 教室名 */
 	private String className;
 	/** 担当講師 */
 	private String instructor;
 	/** 開始日 */
 	private Date startDate;
+
+
+	public abstract String[] getCurriculum();
 
 	/**
 	 * 教室名を取得します
