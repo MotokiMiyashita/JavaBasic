@@ -23,4 +23,14 @@ public class PTra14_01 {
 	 * 		高度な継承
 	 */
 
+	public static void main(String[] args) {
+
+		JavaCourse javaCourse = new JavaCourse();
+		System.out.println(javaCourse.getCourseName());
+
+		String[] courseUnit = javaCourse.getCourseUnit();
+		for(String tmp : courseUnit) {
+		System.out.println(tmp);
+		}
+	}
 }

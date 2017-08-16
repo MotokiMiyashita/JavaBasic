@@ -20,4 +20,14 @@ public class PTra14_02 {
 	 * 		SQL応用
 	 */
 
+	public static void main(String[] args) {
+
+		DBCourse dbCourse = new DBCourse();
+		System.out.println(dbCourse.getCourseName());
+
+		String[] courseUnit = dbCourse.getCourseUnit();
+		for(String tmp : courseUnit) {
+		System.out.println(tmp);
+		}
+	}
 }
