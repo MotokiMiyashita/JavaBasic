@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import entity.Player;
+import entityc.Player;
 
 public class PTra18_04 {
 
@@ -68,7 +68,7 @@ public class PTra18_04 {
 				selectPlayer.add(matchPlayer.get(randNum));
 				isPicked[randNum] = true;
 			}
-			for(Player p : selectPlayer) System.out.println(p.toString());
+			for(Player p : selectPlayer) System.out.println(p);
 		}
 	}
 }

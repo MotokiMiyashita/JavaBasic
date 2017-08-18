@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import entity.Player;
+import practice18.entity.Player;
 
 public class PTra18_02 {
 
@@ -25,7 +25,7 @@ public class PTra18_02 {
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
 		 */
 
-		ArrayList<Player> player = new ArrayList<Player>();
+		ArrayList<Player> player = new ArrayList<Player>(); //playerListにした方が型と混同せず分かりやすい
 		  try(Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
 	            while (scanner.hasNext()) {
 	                String line = scanner.nextLine();

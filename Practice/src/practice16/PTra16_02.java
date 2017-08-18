@@ -20,7 +20,7 @@ public class PTra16_02 {
 
 		// ★ 上記基本型を、それぞれのラッパークラスに代入してください
 
-		Boolean b2 = new Boolean(b);
+		Boolean b2 = new Boolean(b); // Boolean bb = b;
 		Byte by2 = new Byte(by);
 		System.out.println(by2);
 		Short s2= new Short(s);

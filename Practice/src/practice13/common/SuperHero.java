@@ -8,7 +8,7 @@ public class SuperHero extends Hero{
 	}
 
 	public int attack() {
-		int power2 = this.power + equipment.getAdditionalDamage();
+		int power2 = super.attack() + equipment.getAdditionalDamage();
 		System.out.println(this.name+"の攻撃 "+power2+"のダメージ");
 		return power2;
 	}
@@ -18,12 +18,12 @@ public class SuperHero extends Hero{
 //	 * 		equipmentのアクセサ
 
 	public void setSuperHeroItem(Item item) {
-		equipment = item;
+		this.equipment = item;
 	}
-	public String getSuperHeroEquipment() {
-		return equipment.getItemName();
-	}
-	public int getSuperHeroEquipmentPower() {
-		return equipment.getAdditionalDamage();
-	}
+//	public String getSuperHeroEquipment() {
+//		return equipment.getItemName();
+//	}
+//	public int getSuperHeroEquipmentPower() {
+//		return equipment.getAdditionalDamage();
+//	}
 }

@@ -1,6 +1,6 @@
 package practice14.ptra14;
 
-public class JavaCourse implements practice14.common.Course{
+public class JavaCourse implements practice14.common.Course{ //クラスファイルならパッケージにまとめる
 
 	String[] str= {
 			"式と演算",
@@ -12,20 +12,13 @@ public class JavaCourse implements practice14.common.Course{
 	 		"高度な継承"
 	  		};
 
-
-	JavaCourse(){
-
-//		String PREFIX = "【Eラーニング】";
-
-	}
-
 	/**
 	 * コースの名称を取得します。
 	 * 例）Java、DB基礎、IT基礎　など
 	 * @return	単元の名称
 	 */
 	public String getCourseName() {
-		return this.PREFIX+"java";
+		return PREFIX+"java";
 	}
 
 	/**

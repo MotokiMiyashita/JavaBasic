@@ -26,7 +26,7 @@ public class DBCourse implements practice14.common.Course{
 	 * @return	単元の名称
 	 */
 	public String getCourseName() {
-		return this.PREFIX+"DB";
+		return PREFIX+"DB";
 	}
 
 	/**
